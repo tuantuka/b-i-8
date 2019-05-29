@@ -1,25 +1,10 @@
-from tkinter import Tk, Canvas, Frame, BOTH
+from tkinter import *
+tk=Tk()
 
+tk.title("ABC")
 
-class Example(Frame):
-    def __init__(self, parent):
-        Frame.__init__(self, parent)
-        self.parent = parent
-        self.initUI()
+Label(tk, text="Họ tên: NGUYỄN TUÁN TÚ").pack()
+Label(tk, text="MSSV: 1755252021600001").pack()
+Label(tk, text="Ngành học: Kỹ thuật ĐK&TĐH").pack()
 
-    def initUI(self):
-        self.parent.title("Lines")
-        self.pack(fill=BOTH, expand=1)
-
-        canvas = Canvas(self)
-        canvas.create_line(15, 25, 200, 25)
-        canvas.create_line(300, 25, 300, 200, dash=(4, 2))
-        canvas.create_line(55, 85, 155, 85, 105, 180, 55, 85)
-
-        canvas.pack(fill=BOTH, expand=1)
-
-
-root = Tk()
-ex = Example(root)
-root.geometry("400x250+300+300")
-root.mainloop()
+tk.mainloop()
